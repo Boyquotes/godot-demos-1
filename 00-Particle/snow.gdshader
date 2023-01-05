@@ -5,7 +5,8 @@ uniform vec2 target;
 
 void fragment() {
 	vec4 col = texture(TEXTURE, UV);
-	if (target.x == UV.x && target.y == UV.y) {
+		
+	if (abs(target.x - UV.x) < 0.01 && abs(target.y - UV.y) < 0.01) {
 		COLOR = vec4(255.0 * ratio, 255.0 * ratio, 255.0 * ratio, col.a);
 	}
 	else {

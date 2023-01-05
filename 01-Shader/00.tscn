@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://6eoiyxe3fyt3"]
+
+[ext_resource type="Shader" path="res://shaders/06.gdshader" id="1_1fvoy"]
+[ext_resource type="PackedScene" uid="uid://dx4tswhsako31" path="res://assets/mob.glb" id="2_01qb7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_034x3"]
+shader = ExtResource("1_1fvoy")
+
+[sub_resource type="BoxMesh" id="BoxMesh_dmahw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w3srm"]
+albedo_color = Color(0.145098, 0.647059, 0.760784, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_034x3")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+current = true
+
+[node name="mob" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_01qb7")]
+transform = Transform3D(0.65412, 0, 0, 0, -2.85925e-08, -0.65412, 0, 0.65412, -2.85925e-08, 0, 0, -3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.06945)
+mesh = SubResource("BoxMesh_dmahw")
+surface_material_override/0 = SubResource("StandardMaterial3D_w3srm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.814946, 0.579537, 0, -0.579537, 0.814946, 0, 2.15468, 0)

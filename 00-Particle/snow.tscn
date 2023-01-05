@@ -39,10 +39,8 @@ hue_variation_max = 0.2
 script = ExtResource("1_2u8ia")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -11.0
-offset_top = 63.0
-offset_right = 29.0
-offset_bottom = 103.0
+offset_right = 40.0
+offset_bottom = 40.0
 scale = Vector2(15.9609, 11.9209)
 color = Color(0.776471, 1, 1, 1)
 
@@ -62,7 +60,7 @@ process_material = SubResource("ParticleProcessMaterial_ygs0o")
 texture = ExtResource("2_vletf")
 
 [node name="SnowTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="SnowTimer" to="." method="_on_snow_timer_timeout"]

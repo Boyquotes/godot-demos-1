@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://4s788v7lbqjf"]
+
+[ext_resource type="Shader" path="res://shaders/ripple.gdshader" id="1_d45do"]
+[ext_resource type="Texture2D" uid="uid://c0o330pt762k4" path="res://icon.svg" id="2_bpga8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cb0hx"]
+render_priority = 0
+shader = ExtResource("1_d45do")
+shader_parameter/color = Color(0.054902, 0, 0.713726, 1)
+shader_parameter/num_cells = 10.0
+shader_parameter/speed = 1.0
+shader_parameter/smoothness = 1.67
+shader_parameter/angle = 45.0
+shader_parameter/icon = ExtResource("2_bpga8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hmuml"]
+material = SubResource("ShaderMaterial_cb0hx")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 3, 1)
+mesh = SubResource("PlaneMesh_hmuml")

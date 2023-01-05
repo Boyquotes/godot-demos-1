@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://fe5oanaudti3"]
+
+[ext_resource type="Shader" path="res://shaders/canvasi.gdshader" id="1_klhlx"]
+[ext_resource type="Texture2D" uid="uid://c0o330pt762k4" path="res://icon.svg" id="2_dwksr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mgaud"]
+shader = ExtResource("1_klhlx")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_mgaud")
+position = Vector2(578, 299)
+scale = Vector2(2.04888, 2.04888)
+texture = ExtResource("2_dwksr")

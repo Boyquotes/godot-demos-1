@@ -1,0 +1,45 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7axjr4kq0v4u"]
+
+[ext_resource type="Shader" path="res://shaders/polygon.gdshader" id="2_ppxri"]
+[ext_resource type="Shader" path="res://shaders/polar.gdshader" id="3_djyfg"]
+[ext_resource type="Shader" path="res://shaders/angle.gdshader" id="3_okx33"]
+[ext_resource type="Texture2D" uid="uid://c0o330pt762k4" path="res://icon.svg" id="4_dt8sg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rtquf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bfp1h"]
+render_priority = 0
+shader = ExtResource("3_okx33")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ijvb3"]
+render_priority = 0
+shader = ExtResource("2_ppxri")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pe1dx"]
+render_priority = 0
+shader = ExtResource("3_djyfg")
+shader_parameter/tex = ExtResource("4_dt8sg")
+
+[sub_resource type="Environment" id="Environment_jc670"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -3.79435, 1, 1)
+mesh = SubResource("PlaneMesh_rtquf")
+surface_material_override/0 = SubResource("ShaderMaterial_bfp1h")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.257846, 1, 1)
+mesh = SubResource("PlaneMesh_rtquf")
+surface_material_override/0 = SubResource("ShaderMaterial_ijvb3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.55065, 1, 1)
+mesh = SubResource("PlaneMesh_rtquf")
+surface_material_override/0 = SubResource("ShaderMaterial_pe1dx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jc670")

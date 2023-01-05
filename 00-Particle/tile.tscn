@@ -1,21 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqwyep5a4h8lb"]
+[gd_scene load_steps=8 format=3 uid="uid://dqwyep5a4h8lb"]
 
 [ext_resource type="PackedScene" uid="uid://chp88bx1flh2c" path="res://cup.tscn" id="1_letyt"]
+[ext_resource type="Script" path="res://tile.gd" id="1_pcmog"]
 [ext_resource type="PackedScene" uid="uid://carocl67yhm77" path="res://fire.tscn" id="2_r7vsw"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_42e16"]
-resource_name = "effects"
+resource_name = "cup"
 scenes/1/scene = ExtResource("1_letyt")
-scenes/2/scene = ExtResource("2_r7vsw")
+scenes/3/scene = ExtResource("2_r7vsw")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2mlpt"]
+resource_name = "fire"
+scenes/1/scene = ExtResource("2_r7vsw")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_2nv8m"]
+resource_name = "test"
 
 [sub_resource type="TileSet" id="TileSet_fcfgy"]
 custom_data_layer_0/name = ""
 custom_data_layer_0/type = 0
 sources/0 = SubResource("TileSetScenesCollectionSource_42e16")
+sources/1 = SubResource("TileSetScenesCollectionSource_2mlpt")
+sources/3 = SubResource("TileSetScenesCollectionSource_2nv8m")
 
 [node name="tile" type="Node2D"]
+script = ExtResource("1_pcmog")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_fcfgy")
 format = 2
-layer_0/tile_data = PackedInt32Array(196629, 0, 65536, 5, 0, 131072)
+layer_0/name = "base"
+layer_0/tile_data = PackedInt32Array(262149, 0, 65536)

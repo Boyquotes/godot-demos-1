@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch0a3coti37b6"]
+
+[ext_resource type="Shader" path="res://shaders/noise1.gdshader" id="1_dn185"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rtquf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8nq8f"]
+render_priority = 0
+shader = ExtResource("1_dn185")
+
+[sub_resource type="Environment" id="Environment_jc670"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.53908, 1, 1)
+mesh = SubResource("PlaneMesh_rtquf")
+surface_material_override/0 = SubResource("ShaderMaterial_8nq8f")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jc670")

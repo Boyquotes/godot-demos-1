@@ -1,0 +1,18 @@
+[gd_resource type="Shader" format=3 uid="uid://bamaf2sr42fgy"]
+
+[resource]
+code = "shader_type spatial;
+render_mode unshaded;
+
+uniform float width : hint_range(0.0, 1.0) = 0.3;
+uniform float height : hint_range(0.0, 1.0) = 0.3;
+
+void fragment() {
+	vec2 uv_cartesian = UV * 2.0 - 1.0;
+	vec2 uv_reflected = abs(uv_cartesian);
+	float dfx = step(width, uv_reflected.x);
+	float dfy = step(height, uv_reflected.y);
+	float rectangle = max(dfx, dfy);
+	ALBEDO = vec3(rectangle);
+}
+"

@@ -71,9 +71,11 @@ material = SubResource("CanvasItemMaterial_g4ja7")
 amount = 20
 randomness = 0.5
 fixed_fps = 60
+interpolate = false
 trail_lifetime = 1.0
 process_material = SubResource("ParticleProcessMaterial_k4seq")
 texture = ExtResource("2_54aly")
 
 [node name="Cup" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
 texture = ExtResource("1_0o67w")

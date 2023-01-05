@@ -1,0 +1,12 @@
+shader_type spatial;
+render_mode unshaded;
+
+uniform float size : hint_range(0.0, 0.5) = 0.3;
+
+void fragment() {
+	vec2 center = vec2(0.5);
+	float df = distance(UV, center);
+	float circle = step(size, df);
+	
+	ALBEDO = vec3(circle);
+}
