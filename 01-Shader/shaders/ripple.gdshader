@@ -7,7 +7,7 @@ uniform sampler2D icon;
 uniform vec3 color : source_color; 
 uniform float num_cells : hint_range(2.0, 50.0, 1.0) =10.0; 
 uniform float speed : hint_range(0.1,2.0, 0.01) = 1.0;
-uniform float smoothness : hint_range(0.5, 2.0, 0.01) = 0.5; 
+uniform float smoothness : hint_range(0.5, 2.0, 0.01) = 1.5; 
 uniform float angle : hint_range(0.0, 360.0) = 45.0; 
 
 void fragment() {

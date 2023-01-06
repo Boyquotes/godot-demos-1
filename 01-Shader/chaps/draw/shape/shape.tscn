@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cg0rbgt7hj1y3"]
+
+[ext_resource type="Shader" path="res://chaps/draw/shape/shape0.gdshader" id="1_rxfeh"]
+[ext_resource type="Texture2D" uid="uid://c0o330pt762k4" path="res://icon.svg" id="2_42ksr"]
+[ext_resource type="Shader" path="res://chaps/draw/shape/shape1.gdshader" id="3_j25kq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5pecg"]
+shader = ExtResource("1_rxfeh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2p00y"]
+shader = ExtResource("3_j25kq")
+
+[node name="Shape" type="Node2D"]
+
+[node name="Icon1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_5pecg")
+position = Vector2(232, 320)
+scale = Vector2(0.407045, 0.407045)
+texture = ExtResource("2_42ksr")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2p00y")
+position = Vector2(624, 320)
+scale = Vector2(0.407045, 0.407045)
+texture = ExtResource("2_42ksr")

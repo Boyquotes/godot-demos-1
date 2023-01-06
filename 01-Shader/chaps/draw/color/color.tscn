@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh147vev24nuq"]
+
+[ext_resource type="Shader" path="res://chaps/draw/color/color0.gdshader" id="1_j71qm"]
+[ext_resource type="Texture2D" uid="uid://c0o330pt762k4" path="res://icon.svg" id="1_m04dx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ap4sl"]
+shader = ExtResource("1_j71qm")
+shader_parameter/colorA = Color(0.149, 0.141, 0.912, 1)
+shader_parameter/colorB = Color(1, 0.833, 0.224, 1)
+
+[node name="Color" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ap4sl")
+position = Vector2(224, 280)
+scale = Vector2(0.326003, 0.326003)
+texture = ExtResource("1_m04dx")
