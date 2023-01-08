@@ -17,3 +17,13 @@
 [Game Development Knowledge](https://www.youtube.com/watch?v=JVSNJ7p4KLE&list=PLIPN1rqO-3eHLonTbIUIDPq_AxCpVbuug)
 
 [Things about Godot You Should Know](https://www.youtube.com/watch?v=UqnwfxaMxBU&list=PLIPN1rqO-3eHRuQI_zNbHMGB7Tj8UvM7p)
+
+[Make Hitbox and Hurtbox](https://www.youtube.com/watch?v=tHEr7x5Un9c&list=PLZbFp1Tf_b_zKWYmxIh2z5BS5DrOprxFG&index=2&t=376s) / 
+[The github repo](https://github.com/robyn3choi/godot-tutorial_hurtbox)
+
+[昼夜循环](https://www.youtube.com/watch?v=Qe0WXxzhrzQ&t=17s)
+
+[Godot4.0 Tilemap](https://www.youtube.com/watch?v=tQSL2scuqeU)
+
+[Godot VFX](https://www.youtube.com/watch?v=D7XSL0zBOwI&list=PLIPN1rqO-3eHrOQ8BpTtelpq46TF_yFdk&index=1)
+

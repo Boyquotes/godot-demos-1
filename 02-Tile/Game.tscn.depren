@@ -1,0 +1,4 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://digg67kbmko4j" path="res://Tile.tscn" id="1_cp7mv"]
+[ext_resource type="Texture2D" uid="uid://dfc1sqg533gmr" path="res://assets/icon.svg" id="2_sxuj7"]

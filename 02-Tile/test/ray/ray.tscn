@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0sppx5ef3tae"]
+
+[ext_resource type="Texture2D" uid="uid://dfc1sqg533gmr" path="res://assets/icon.svg" id="1_ujvt1"]
+[ext_resource type="Script" path="res://test/ray/Icon.gd" id="2_7d5rm"]
+[ext_resource type="Texture2D" uid="uid://cjrmye10yxbe1" path="res://assets/cup.png" id="2_h57er"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grbqb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(72, 149)
+scale = Vector2(0.393745, 0.393745)
+texture = ExtResource("1_ujvt1")
+script = ExtResource("2_7d5rm")
+
+[node name="RayCast2D" type="RayCast2D" parent="Icon"]
+target_position = Vector2(185.399, 2.5397)
+
+[node name="Cup1" type="StaticBody2D" parent="."]
+position = Vector2(352, 69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cup1"]
+position = Vector2(0, 3)
+scale = Vector2(2.15393, 2.02624)
+shape = SubResource("RectangleShape2D_grbqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cup1"]
+texture = ExtResource("2_h57er")
+
+[node name="Cup2" type="StaticBody2D" parent="."]
+position = Vector2(354, 214)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cup2"]
+position = Vector2(0, 3)
+scale = Vector2(2.15393, 2.02624)
+shape = SubResource("RectangleShape2D_grbqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cup2"]
+texture = ExtResource("2_h57er")

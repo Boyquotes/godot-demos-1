@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnb8bcnxdks14"]
+
+[ext_resource type="Shader" path="res://vfx/burning/burning.gdshader" id="1_h2gpf"]
+[ext_resource type="Texture2D" uid="uid://fn1gs1l5e63i" path="res://assets/cup.png" id="2_ejcxn"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_cl0hb"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_d5i3l"]
+generate_mipmaps = false
+seamless = true
+noise = SubResource("FastNoiseLite_cl0hb")
+
+[sub_resource type="Gradient" id="Gradient_w0aoo"]
+offsets = PackedFloat32Array(0, 0.0993789, 0.434783, 0.68323, 0.869565)
+colors = PackedColorArray(0, 0, 0, 1, 0.976471, 0.0980392, 0.0980392, 1, 0.99, 0.69432, 0.4356, 1, 0.932122, 0.832288, 0.390648, 1, 0.961954, 0.896644, 0.437152, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f2qyy"]
+gradient = SubResource("Gradient_w0aoo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_is7k6"]
+shader = ExtResource("1_h2gpf")
+shader_parameter/scroll = Vector2(0.5, 0.5)
+shader_parameter/scroll2 = Vector2(0.3, 0.549)
+shader_parameter/noise_scale1 = Vector2(1.673, 1)
+shader_parameter/noise_scale2 = Vector2(1, 1)
+shader_parameter/base_intensity = 0.009
+shader_parameter/intensity_factor = 2.094
+shader_parameter/NOISE_PATTERN = SubResource("NoiseTexture2D_d5i3l")
+shader_parameter/TONE_MAPPING = SubResource("GradientTexture1D_f2qyy")
+
+[node name="Burning" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_is7k6")
+position = Vector2(584, 312)
+scale = Vector2(0.899206, 0.884171)
+texture = ExtResource("2_ejcxn")
+metadata/_edit_lock_ = true

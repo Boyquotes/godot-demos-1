@@ -1,0 +1,5 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://test/Nav0.gd" id="1_fyxap"]
+[ext_resource type="Texture2D" uid="uid://d23mi1vx0c1c5" path="res://assets/Grasslands.png" id="2_x2ggu"]
+[ext_resource type="Texture2D" uid="uid://dfc1sqg533gmr" path="res://assets/icon.svg" id="3_8kxth"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://test/Nav3.gd" id="1_12e7f"]
+[ext_resource type="Texture2D" uid="uid://d23mi1vx0c1c5" path="res://assets/Grasslands.png" id="2_2jeer"]
+[ext_resource type="Script" path="res://test/TileMap.gd" id="3_ddo0a"]
+[ext_resource type="Texture2D" uid="uid://dfc1sqg533gmr" path="res://assets/icon.svg" id="4_b2kdu"]
